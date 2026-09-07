@@ -51,7 +51,7 @@ def create_heatmap(df):
      )
      return heatmap
 page_icon = Image.open("logo.png")
-st.set_page_config(layout="wide", page_title="Machine Learning Studio", page_icon=page_icon)
+st.set_page_config(layout="wide", page_title="InsightFlow", page_icon=page_icon)
 def initial_state():
     if 'df' not in st.session_state:
         st.session_state['df'] = None
@@ -159,11 +159,6 @@ new_line(2)
 uploading_way = st.session_state.uploading_way
 
 col1, col2, col3 = st.columns(3, gap='large')
-
-new_line(2)
-
-uploading_way=st.session_state.uploading_way
-col1,col2,col3=st.columns(3,gap='large')
 
 
 def upload_click():st.session_state.uploading_way="upload"
@@ -1433,6 +1428,25 @@ model.fit(X_train, y_train)
         st.session_state.clear()
             # st.experimental_rerun()
             
+
+
+
+
+
+
+          
+    
+                    
+                
+
+
+
+
+
+
+
+              
+
 
 
 
