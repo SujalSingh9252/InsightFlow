@@ -137,20 +137,28 @@ def load_data(upd_file):
     return df 
 
 def progress_bar():
-    my_bar=st.progress(0)
+    my_bar = st.progress(0)
+
     for percent_complete in range(100):
         time.sleep(0.0002)
-        my_bar.progress(percent_complete+1)
-col1, col2 = st.columns([3, 6])
-with col1:
-    st.image("logo.png", width=200)
-with col2:
-    st.markdown(
-        '<h1 class="main-header" style="font-family: Algerian;font-weight:400;">Machine Learning Studio</h1>',
-        unsafe_allow_html=True,
+        my_bar.progress(percent_complete + 1)
+
+
+# Centered InsightFlow Logo
+left_col, center_col, right_col = st.columns([1, 4, 1])
+
+with center_col:
+    st.image(
+        "logo.png",
+        use_container_width=True
     )
 
-col1,col2,col3=st.columns([0.25,1,0.25])
+
+new_line(2)
+
+uploading_way = st.session_state.uploading_way
+
+col1, col2, col3 = st.columns(3, gap='large')
 
 new_line(2)
 
